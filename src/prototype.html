@@ -1,0 +1,667 @@
+<div class="background-layer" aria-hidden="true"></div>
+
+  <section id="login-screen" class="login-screen">
+    <div class="login-panel card">
+      <div class="platform-brand">
+        <p class="eyebrow">Smart India Hackathon 2026</p>
+        <h1>Bharat Material Brain</h1>
+        <p class="tagline">AI-Powered Unified Material Master Platform</p>
+      </div>
+
+      <form id="loginForm" class="login-form">
+        <label for="email">Email</label>
+        <input id="email" type="email" value="procurement.officer@gem.gov.in" required>
+
+        <label for="password">Password</label>
+        <input id="password" type="password" value="password" required>
+
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+        <button type="button" id="ssoLoginBtn" class="btn btn-secondary btn-block">SSO Login</button>
+
+        <a href="#" class="text-link">Forgot Password</a>
+      </form>
+    </div>
+
+    <div class="login-illustration card" aria-hidden="true">
+      <h2>Unified Material Intelligence</h2>
+      <p>Centralized, AI-assisted material harmonization for CPSE and GeM ecosystems.</p>
+      <div class="diagram">
+        <div class="diagram-node source">
+          <span class="material-symbols-outlined">database</span>
+          <span>CPSE Material Masters</span>
+        </div>
+        <div class="diagram-node ai">
+          <span class="material-symbols-outlined">neurology</span>
+          <span>AI Semantic Engine</span>
+        </div>
+        <div class="diagram-node target">
+          <span class="material-symbols-outlined">hub</span>
+          <span>Unified Repository</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="platform-shell" class="platform-shell hidden">
+    <aside class="sidebar">
+      <div>
+        <div class="sidebar-brand">
+          <p class="eyebrow">SIH 2026 Prototype</p>
+          <h2>Bharat Material Brain</h2>
+          <p>Unified Material Master</p>
+        </div>
+
+        <button class="btn btn-primary btn-block upload-cta" data-screen="upload-data">
+          <span class="material-symbols-outlined">upload_file</span>
+          Upload Material Data
+        </button>
+
+        <nav class="sidebar-nav" aria-label="Primary">
+          <button class="nav-item active" data-screen="dashboard">
+            <span class="material-symbols-outlined">dashboard</span>
+            Dashboard
+          </button>
+          <button class="nav-item" data-screen="material-repository">
+            <span class="material-symbols-outlined">inventory_2</span>
+            Material Repository
+          </button>
+          <button class="nav-item" data-screen="ai-analysis">
+            <span class="material-symbols-outlined">psychology_alt</span>
+            AI Analysis
+          </button>
+          <button class="nav-item" data-screen="standardization">
+            <span class="material-symbols-outlined">rule</span>
+            Standardization
+          </button>
+          <button class="nav-item" data-screen="review-queue">
+            <span class="material-symbols-outlined">fact_check</span>
+            Review Queue
+          </button>
+          <button class="nav-item" data-screen="analytics">
+            <span class="material-symbols-outlined">query_stats</span>
+            Analytics
+          </button>
+          <button class="nav-item" data-screen="settings">
+            <span class="material-symbols-outlined">settings</span>
+            Settings
+          </button>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer card subtle-card">
+        <p class="eyebrow">Current Role</p>
+        <h3>Procurement Officer</h3>
+        <p>CPSE Reviewer and Material Master Validator</p>
+      </div>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <div>
+          <h2 id="screenTitle">Dashboard</h2>
+          <p id="screenSubtitle">AI-assisted standardization progress across CPSE material records.</p>
+        </div>
+        <div class="topbar-actions">
+          <span class="badge badge-government">Government e-Marketplace Ready</span>
+          <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+        </div>
+      </header>
+
+      <section class="workflow-strip card" aria-label="Workflow">
+        <div class="flow-step" data-step="upload-data">Upload Material File</div>
+        <div class="flow-step" data-step="upload-data">Preview Data</div>
+        <div class="flow-step" data-step="ai-analysis">Run AI Analysis</div>
+        <div class="flow-step" data-step="ai-analysis">Detect Duplicates</div>
+        <div class="flow-step" data-step="ai-analysis">Generate Recommendations</div>
+        <div class="flow-step" data-step="review-queue">Human Review</div>
+        <div class="flow-step" data-step="standardization">Approve Standard Material</div>
+        <div class="flow-step" data-step="material-repository">Save to Unified Repository</div>
+        <div class="flow-step" data-step="analytics">View Analytics</div>
+      </section>
+
+      <main class="main-content">
+        <section id="dashboard" class="module-screen active" data-title="Dashboard" data-subtitle="AI-assisted standardization progress across CPSE material records.">
+          <div class="kpi-grid">
+            <article class="kpi-card card stagger-item">
+              <div class="kpi-head">
+                <span>Total Materials</span>
+                <span class="material-symbols-outlined">inventory_2</span>
+              </div>
+              <h3 data-counter-target="128450" data-counter-format="number">0</h3>
+              <p>Records consolidated from 14 CPSE systems</p>
+            </article>
+            <article class="kpi-card card stagger-item">
+              <div class="kpi-head">
+                <span>Duplicate Materials</span>
+                <span class="material-symbols-outlined">content_copy</span>
+              </div>
+              <h3 data-counter-target="14280" data-counter-format="number">0</h3>
+              <p>Potential exact duplicates identified</p>
+            </article>
+            <article class="kpi-card card stagger-item">
+              <div class="kpi-head">
+                <span>Pending Reviews</span>
+                <span class="material-symbols-outlined">pending_actions</span>
+              </div>
+              <h3 data-counter-target="1146" data-counter-format="number">0</h3>
+              <p>Human validation queue for reviewers</p>
+            </article>
+            <article class="kpi-card card stagger-item">
+              <div class="kpi-head">
+                <span>Standardized Records</span>
+                <span class="material-symbols-outlined">verified</span>
+              </div>
+              <h3 data-counter-target="102938" data-counter-format="number">0</h3>
+              <p>Approved and published in repository</p>
+            </article>
+            <article class="kpi-card card stagger-item">
+              <div class="kpi-head">
+                <span>AI Accuracy</span>
+                <span class="material-symbols-outlined">auto_graph</span>
+              </div>
+              <h3 data-counter-target="94.7" data-counter-format="percent">0%</h3>
+              <p>Model confidence validated by reviewers</p>
+            </article>
+          </div>
+
+          <div class="dashboard-grid">
+            <article class="card chart-card stagger-item">
+              <div class="card-head">
+                <h3>Material Categories</h3>
+                <span class="badge">Live Mix</span>
+              </div>
+              <canvas id="categoriesChart"></canvas>
+            </article>
+            <article class="card chart-card stagger-item">
+              <div class="card-head">
+                <h3>Duplicate Trend</h3>
+                <span class="badge">Last 6 Months</span>
+              </div>
+              <canvas id="duplicateTrendChart"></canvas>
+            </article>
+            <article class="card chart-card stagger-item">
+              <div class="card-head">
+                <h3>Processing Status</h3>
+                <span class="badge">Current Batch</span>
+              </div>
+              <canvas id="processingStatusChart"></canvas>
+            </article>
+          </div>
+
+          <div class="dashboard-lower">
+            <article class="card stagger-item">
+              <div class="card-head">
+                <h3>Recent Activities</h3>
+              </div>
+              <ul class="activity-list">
+                <li><strong>CPSE-NTPC</strong> uploaded September fastener dataset (2,400 rows).</li>
+                <li><strong>AI Engine</strong> detected 182 near-duplicates in cable categories.</li>
+                <li><strong>Reviewer Team B</strong> approved 67 standards for valve components.</li>
+                <li><strong>GeM Admin</strong> exported harmonized repository snapshot.</li>
+              </ul>
+            </article>
+
+            <article class="card stagger-item">
+              <div class="card-head">
+                <h3>Quick Actions</h3>
+              </div>
+              <div class="quick-actions">
+                <button class="quick-action" data-go="upload-data">
+                  <span class="material-symbols-outlined">upload_file</span>
+                  Upload Material File
+                </button>
+                <button class="quick-action" data-go="ai-analysis">
+                  <span class="material-symbols-outlined">psychology_alt</span>
+                  Start AI Analysis
+                </button>
+                <button class="quick-action" data-go="material-repository">
+                  <span class="material-symbols-outlined">folder_open</span>
+                  Open Repository
+                </button>
+                <button class="quick-action" data-go="review-queue">
+                  <span class="material-symbols-outlined">fact_check</span>
+                  Review Pending Records
+                </button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="upload-data" class="module-screen" data-title="Upload Material Data" data-subtitle="Import, validate, and preview CPSE material datasets before AI processing.">
+          <div class="upload-layout">
+            <article class="card upload-card">
+              <div class="card-head">
+                <h3>Upload Material File</h3>
+                <span class="badge">CSV or Excel</span>
+              </div>
+              <div id="dropzone" class="dropzone" tabindex="0">
+                <span class="material-symbols-outlined">cloud_upload</span>
+                <h4>Drag and drop file here</h4>
+                <p>or choose a file from your computer</p>
+                <button id="chooseFileBtn" class="btn btn-secondary" type="button">Choose File</button>
+                <input id="uploadFileInput" type="file" accept=".csv,.xls,.xlsx" hidden>
+                <div class="dummy-file-actions">
+                  <button id="useDummyFileBtn" class="btn btn-secondary" type="button">Use Dummy File</button>
+                  <a class="dummy-file-link" href="/dummy-material-upload.csv" download>Download Dummy CSV</a>
+                </div>
+                <p id="selectedFileName" class="small-muted">No file selected</p>
+              </div>
+              <div class="upload-actions">
+                <button id="validateFileBtn" class="btn btn-secondary" type="button">Validate File</button>
+                <button id="startAnalysisBtn" class="btn btn-primary" type="button" disabled>Start AI Analysis</button>
+              </div>
+              <div class="validation-status">
+                <div class="status-item">
+                  <span class="label">Rows</span>
+                  <strong id="uploadRows">0</strong>
+                </div>
+                <div class="status-item">
+                  <span class="label">Columns</span>
+                  <strong id="uploadColumns">0</strong>
+                </div>
+                <div class="status-item">
+                  <span class="label">Detected Fields</span>
+                  <strong id="uploadFields">0</strong>
+                </div>
+                <div class="status-item">
+                  <span class="label">Validation</span>
+                  <strong id="uploadValidationLabel">Awaiting file</strong>
+                </div>
+              </div>
+              <div class="progress-track small">
+                <div id="uploadValidationProgress" class="progress-fill"></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-head">
+                <h3>Recent Upload History</h3>
+              </div>
+              <table class="data-table compact">
+                <thead>
+                  <tr>
+                    <th>File</th>
+                    <th>Rows</th>
+                    <th>Status</th>
+                    <th>Uploaded By</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>cpse_fasteners_sep.csv</td>
+                    <td>2,400</td>
+                    <td><span class="badge badge-success">Validated</span></td>
+                    <td>CPSE-NTPC</td>
+                  </tr>
+                  <tr>
+                    <td>gem_valves_q3.xlsx</td>
+                    <td>1,180</td>
+                    <td><span class="badge badge-warning">In Review</span></td>
+                    <td>GeM Admin</td>
+                  </tr>
+                  <tr>
+                    <td>steel_components_aug.csv</td>
+                    <td>3,020</td>
+                    <td><span class="badge badge-success">Analyzed</span></td>
+                    <td>CPSE-SAIL</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+
+          <article class="card preview-card">
+            <div class="card-head">
+              <h3>Preview Uploaded Data</h3>
+              <span class="badge">Sample Rows</span>
+            </div>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Material Code</th>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>Category</th>
+                  <th>Manufacturer</th>
+                  <th>Unit</th>
+                </tr>
+              </thead>
+              <tbody id="uploadPreviewBody">
+                <tr>
+                  <td>MAT-1001</td>
+                  <td>MS Hex Bolt M10</td>
+                  <td>Mild steel hex bolt, M10 x 50mm, zinc coated</td>
+                  <td>Fasteners</td>
+                  <td>ABC Industrial</td>
+                  <td>Nos</td>
+                </tr>
+                <tr>
+                  <td>MAT-1002</td>
+                  <td>Hex Nut SS304</td>
+                  <td>Stainless steel hex nut grade SS304, M10</td>
+                  <td>Fasteners</td>
+                  <td>Unimet</td>
+                  <td>Nos</td>
+                </tr>
+                <tr>
+                  <td>MAT-1003</td>
+                  <td>PVC Pipe 110mm</td>
+                  <td>PVC pressure pipe, 110 mm outer diameter</td>
+                  <td>Pipes</td>
+                  <td>Flowline</td>
+                  <td>Meter</td>
+                </tr>
+                <tr>
+                  <td>MAT-1004</td>
+                  <td>Bearing SKF6205</td>
+                  <td>Deep groove ball bearing SKF 6205</td>
+                  <td>Bearings</td>
+                  <td>SKF</td>
+                  <td>Nos</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+
+        <section id="ai-analysis" class="module-screen" data-title="AI Analysis" data-subtitle="Detect duplicates, near-duplicates, and functional equivalents with confidence scoring.">
+          <article class="card analysis-hero">
+            <div class="analysis-progress-wrap">
+              <div class="processing-ring" id="processingRing">
+                <span id="analysisProgressPercent">0%</span>
+              </div>
+              <div>
+                <h3>AI Material Intelligence Pipeline</h3>
+                <p>Semantic matching, fuzzy logic, and embedding comparison running on uploaded dataset.</p>
+                <div class="progress-track">
+                  <div id="analysisProgressBar" class="progress-fill"></div>
+                </div>
+                <button id="runAnalysisBtn" class="btn btn-primary" type="button">Run AI Analysis</button>
+              </div>
+            </div>
+
+            <div class="analysis-metrics">
+              <div class="metric-card">
+                <p>Materials Processed</p>
+                <strong id="metricProcessed" data-counter-target="2400" data-counter-format="number">0</strong>
+              </div>
+              <div class="metric-card">
+                <p>Duplicate Candidates</p>
+                <strong id="metricDuplicate" data-counter-target="182" data-counter-format="number">0</strong>
+              </div>
+              <div class="metric-card">
+                <p>Near Duplicates</p>
+                <strong id="metricNearDuplicate" data-counter-target="139" data-counter-format="number">0</strong>
+              </div>
+              <div class="metric-card">
+                <p>Functional Equivalents</p>
+                <strong id="metricEquivalent" data-counter-target="74" data-counter-format="number">0</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-head">
+              <h3>AI Recommendation Comparison Table</h3>
+              <span class="badge">Premium Review Grid</span>
+            </div>
+            <table class="data-table" id="analysisTable">
+              <thead>
+                <tr>
+                  <th>Record</th>
+                  <th>Original Material</th>
+                  <th>Potential Match</th>
+                  <th>Similarity Score</th>
+                  <th>AI Confidence</th>
+                  <th>Recommendation</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="analysisTableBody"></tbody>
+            </table>
+          </article>
+        </section>
+
+        <section id="standardization" class="module-screen" data-title="Material Standardization" data-subtitle="Compare original records against AI recommendations and approve final standards.">
+          <article class="card standardization-toolbar">
+            <div>
+              <h3 id="standardRecordTitle">Standardization Workspace</h3>
+              <p id="standardRecordSub">Select a recommendation from AI Analysis to begin detailed review.</p>
+            </div>
+            <div class="button-row">
+              <button id="approveStandardBtn" class="btn btn-primary" type="button">Approve</button>
+              <button id="modifyStandardBtn" class="btn btn-secondary" type="button">Modify</button>
+              <button id="rejectStandardBtn" class="btn btn-danger" type="button">Reject</button>
+              <button id="saveStandardBtn" class="btn btn-emerald" type="button">Save Standard</button>
+            </div>
+          </article>
+
+          <div class="split-layout">
+            <article class="card pane">
+              <h3>Original Material</h3>
+              <div class="field-list" id="originalFieldList">
+                <div class="field-row"><span>Material Code</span><strong id="origCode">-</strong></div>
+                <div class="field-row"><span>Name</span><strong id="origName">-</strong></div>
+                <div class="field-row"><span>Description</span><strong id="origDescription">-</strong></div>
+                <div class="field-row"><span>Specification</span><strong id="origSpec">-</strong></div>
+                <div class="field-row"><span>Category</span><strong id="origCategory">-</strong></div>
+                <div class="field-row"><span>Manufacturer</span><strong id="origManufacturer">-</strong></div>
+                <div class="field-row"><span>Unit</span><strong id="origUnit">-</strong></div>
+              </div>
+            </article>
+
+            <article class="card pane recommendation-pane">
+              <h3>AI Recommended Standard</h3>
+              <div class="field-list" id="recommendedFieldList">
+                <div class="field-row diff"><span>Standard Material Name</span><strong id="recName">-</strong></div>
+                <div class="field-row diff"><span>Standard Description</span><strong id="recDescription">-</strong></div>
+                <div class="field-row diff"><span>Standard Category</span><strong id="recCategory">-</strong></div>
+                <div class="field-row diff"><span>Equivalent Material</span><strong id="recEquivalent">-</strong></div>
+                <div class="field-row"><span>Suggested Keywords</span><strong id="recKeywords">-</strong></div>
+                <div class="field-row"><span>Confidence</span><strong id="recConfidence">-</strong></div>
+              </div>
+            </article>
+          </div>
+
+          <article class="card">
+            <div class="card-head">
+              <h3>Difference Highlights</h3>
+            </div>
+            <div id="differenceSummary" class="difference-summary">
+              Differences between original and recommended values are highlighted in emerald for fast review.
+            </div>
+          </article>
+        </section>
+
+        <section id="review-queue" class="module-screen" data-title="Review Queue" data-subtitle="Human validation workflow for AI recommendations before repository publication.">
+          <div class="review-kpis">
+            <article class="card mini-kpi"><p>Pending Reviews</p><h3 id="pendingCount">0</h3></article>
+            <article class="card mini-kpi"><p>Approved</p><h3 id="approvedCount">0</h3></article>
+            <article class="card mini-kpi"><p>Rejected</p><h3 id="rejectedCount">0</h3></article>
+          </div>
+
+          <article class="card filter-bar">
+            <input id="reviewSearchInput" type="search" placeholder="Search material, reviewer, or code">
+            <select id="reviewStatusFilter">
+              <option value="all">All Status</option>
+              <option value="Pending">Pending</option>
+              <option value="Approved">Approved</option>
+              <option value="Rejected">Rejected</option>
+            </select>
+            <select id="reviewConfidenceFilter">
+              <option value="all">All Confidence</option>
+              <option value="High">High</option>
+              <option value="Medium">Medium</option>
+              <option value="Low">Low</option>
+            </select>
+          </article>
+
+          <div class="review-layout">
+            <article class="card">
+              <table class="data-table" id="reviewTable">
+                <thead>
+                  <tr>
+                    <th>Material</th>
+                    <th>Reviewer</th>
+                    <th>AI Confidence</th>
+                    <th>Status</th>
+                    <th>Last Updated</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="reviewTableBody"></tbody>
+              </table>
+            </article>
+
+            <article class="card audit-card">
+              <div class="card-head">
+                <h3>Audit Trail</h3>
+              </div>
+              <ul id="auditTrailList" class="audit-list">
+                <li>Select any record to view detailed review timeline.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="material-repository" class="module-screen" data-title="Unified Material Repository" data-subtitle="Search and manage harmonized material records across CPSE entities.">
+          <article class="card repository-toolbar">
+            <div class="search-stack">
+              <label for="repoSearch">Search Material Repository</label>
+              <input id="repoSearch" type="search" placeholder="Search by material name, code, or category" autocomplete="off">
+              <div id="searchSuggestions" class="suggestions hidden"></div>
+            </div>
+            <div class="button-row">
+              <button id="toggleAdvancedFilters" class="btn btn-secondary" type="button">Advanced Filters</button>
+              <button id="exportRepositoryBtn" class="btn btn-primary" type="button">Export</button>
+            </div>
+          </article>
+
+          <article id="advancedFilterPanel" class="card advanced-filters hidden">
+            <div class="filter-grid">
+              <div>
+                <label for="repoCategoryFilter">Category</label>
+                <select id="repoCategoryFilter">
+                  <option value="all">All Categories</option>
+                </select>
+              </div>
+              <div>
+                <label for="repoStatusFilter">Status</label>
+                <select id="repoStatusFilter">
+                  <option value="all">All Status</option>
+                  <option value="Active">Active</option>
+                  <option value="Under Review">Under Review</option>
+                </select>
+              </div>
+              <div>
+                <label for="repoConfidenceFilter">Minimum Confidence</label>
+                <select id="repoConfidenceFilter">
+                  <option value="all">All</option>
+                  <option value="90">90% and above</option>
+                  <option value="75">75% and above</option>
+                </select>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <table class="data-table" id="repositoryTable">
+              <thead>
+                <tr>
+                  <th class="sortable" data-sort-key="materialCode">Material Code</th>
+                  <th class="sortable" data-sort-key="standardName">Standard Name</th>
+                  <th class="sortable" data-sort-key="category">Category</th>
+                  <th>Description</th>
+                  <th>Equivalent Materials</th>
+                  <th class="sortable" data-sort-key="status">Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="repositoryTableBody"></tbody>
+            </table>
+          </article>
+        </section>
+
+        <section id="analytics" class="module-screen" data-title="Analytics" data-subtitle="Measure standardization impact, AI performance, and repository growth.">
+          <div class="kpi-grid analytics-kpis">
+            <article class="kpi-card card">
+              <div class="kpi-head"><span>Materials Processed</span><span class="material-symbols-outlined">dataset</span></div>
+              <h3 data-counter-target="186700" data-counter-format="number">0</h3>
+              <p>Total records processed this financial year</p>
+            </article>
+            <article class="kpi-card card">
+              <div class="kpi-head"><span>Duplicates Removed</span><span class="material-symbols-outlined">remove_done</span></div>
+              <h3 data-counter-target="29840" data-counter-format="number">0</h3>
+              <p>Consolidated duplicate and near-duplicate entries</p>
+            </article>
+            <article class="kpi-card card">
+              <div class="kpi-head"><span>Standardization Rate</span><span class="material-symbols-outlined">task_alt</span></div>
+              <h3 data-counter-target="84.2" data-counter-format="percent">0%</h3>
+              <p>Records approved after human validation</p>
+            </article>
+            <article class="kpi-card card">
+              <div class="kpi-head"><span>Average Confidence</span><span class="material-symbols-outlined">bolt</span></div>
+              <h3 data-counter-target="91.4" data-counter-format="percent">0%</h3>
+              <p>Average AI confidence across processed batches</p>
+            </article>
+          </div>
+
+          <div class="analytics-grid">
+            <article class="card chart-card"><h3>Duplicate Reduction</h3><canvas id="duplicateReductionChart"></canvas></article>
+            <article class="card chart-card"><h3>Category Distribution</h3><canvas id="categoryDistributionChart"></canvas></article>
+            <article class="card chart-card"><h3>Monthly Processing</h3><canvas id="monthlyProcessingChart"></canvas></article>
+            <article class="card chart-card"><h3>AI Accuracy</h3><canvas id="accuracyChart"></canvas></article>
+            <article class="card chart-card wide"><h3>Repository Growth</h3><canvas id="growthChart"></canvas></article>
+          </div>
+        </section>
+
+        <section id="settings" class="module-screen" data-title="Settings" data-subtitle="Configure governance rules, review thresholds, and CPSE integration preferences.">
+          <div class="settings-grid">
+            <article class="card">
+              <h3>AI Threshold Configuration</h3>
+              <div class="setting-item">
+                <label for="highThreshold">High Confidence Auto-Flag (%)</label>
+                <input id="highThreshold" type="number" value="90" min="50" max="100">
+              </div>
+              <div class="setting-item">
+                <label for="mediumThreshold">Medium Confidence Range Start (%)</label>
+                <input id="mediumThreshold" type="number" value="75" min="40" max="100">
+              </div>
+              <button class="btn btn-primary" type="button">Save Thresholds</button>
+            </article>
+
+            <article class="card">
+              <h3>Workflow Governance</h3>
+              <div class="setting-check"><input type="checkbox" checked> Mandatory dual-review for low confidence records</div>
+              <div class="setting-check"><input type="checkbox" checked> Preserve full audit trail for each standardization action</div>
+              <div class="setting-check"><input type="checkbox" checked> Require GeM Admin sign-off for cross-category merge</div>
+              <button class="btn btn-secondary" type="button">Update Governance Rules</button>
+            </article>
+
+            <article class="card">
+              <h3>Integration Status</h3>
+              <table class="data-table compact">
+                <thead>
+                  <tr><th>Entity</th><th>Sync</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>GeM Core Catalog</td><td>Every 4 hours</td><td><span class="badge badge-success">Connected</span></td></tr>
+                  <tr><td>CPSE-NTPC</td><td>Daily</td><td><span class="badge badge-success">Connected</span></td></tr>
+                  <tr><td>CPSE-SAIL</td><td>Daily</td><td><span class="badge badge-warning">Lagging</span></td></tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <div id="overlayBackdrop" class="overlay hidden"></div>
+  <aside id="materialProfileDrawer" class="material-drawer hidden" aria-label="Material Profile">
+    <div class="drawer-head">
+      <h3>Material Profile</h3>
+      <button id="closeDrawerBtn" class="btn btn-secondary" type="button">Close</button>
+    </div>
+    <div id="drawerContent" class="drawer-content"></div>
+  </aside>
